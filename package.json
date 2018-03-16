@@ -1,0 +1,32 @@
+{
+  "name": "vue-lpage",
+  "description": "Low-level Vue pagination component",
+  "version": "0.0.0",
+  "main": "dist/vue-lpage.js",
+  "scripts": {
+    "build": "webpack --mode production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Botre/vue-lpage.git"
+  },
+  "keywords": [
+    "vue",
+    "paginator",
+    "pagination",
+    "page",
+    "paginate"
+  ],
+  "author": "Bjorn Krols",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.15",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
