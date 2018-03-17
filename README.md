@@ -27,7 +27,27 @@ npm install --save vue-lpage
 
 [npm package link](https://www.npmjs.com/package/vue-lpage)
 
-## Example
+## Examples
+
+```vue
+<!-- This will render [ "a", "b" ] -->
+<template>
+    <vue-lpage :data="['a', 'b', 'c']" :page="1" :results-per-page="2">
+      <div slot-scope="{subset}">
+        {{ subset }}
+      </div>
+    </vue-lpage>
+</template>
+
+<script>
+import VueLpage from 'vue-lpage';
+export default {
+  components: {
+    VueLpage
+  }
+};
+</script>
+```
 
 ```vue
 <template>
