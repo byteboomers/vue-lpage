@@ -19,7 +19,7 @@ export default {
       return this.data.slice(firstEntry, lastEntry);
     },
     totalPages() {
-      return Math.ceil(this.data.length / this.resultsPerPageInt);
+      return Math.ceil(this.data.length / this.resultsPerPageInt) || 1;
     },
     isFirstPage() {
       return this.pageInt === 1;
