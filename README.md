@@ -2,7 +2,7 @@
 
 > Low-level Vue pagination component
 
-![screenshot](./assets/example.png)
+![screenshot](./screenshot.png)
 
 ## About
 
