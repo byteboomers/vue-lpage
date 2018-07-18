@@ -1,7 +1,7 @@
 {
   "name": "vue-lpage",
   "description": "Low-level Vue pagination component",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "dist/vue-lpage.js",
   "scripts": {
     "build": "webpack --mode production --progress"
