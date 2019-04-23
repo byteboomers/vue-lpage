@@ -1,17 +1,17 @@
 <template>
   <div>
-      <slot
-        :subset="subset"
-        :totalPages="totalPages"
-        :isFirstPage="isFirstPage"
-        :isLastPage="isLastPage">
-      </slot>
+    <slot
+      :subset="subset"
+      :totalPages="totalPages"
+      :isFirstPage="isFirstPage"
+      :isLastPage="isLastPage"
+    ></slot>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['page', 'data', 'resultsPerPage'],
+  props: ["page", "data", "resultsPerPage"],
   computed: {
     subset() {
       const firstEntry = (this.pageInt - 1) * this.resultsPerPageInt;
@@ -38,14 +38,14 @@ export default {
   watch: {
     pageInt(page) {
       if (page < 1) {
-        this.$emit('underflow');
+        this.$emit("underflow");
       } else if (page > this.totalPages) {
-        this.$emit('overflow');
+        this.$emit("overflow");
       }
     },
     resultsPerPageInt() {
       if (this.pageInt > this.totalPages) {
-        this.$emit('overflow');
+        this.$emit("overflow");
       }
     }
   }
