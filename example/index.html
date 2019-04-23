@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue-lpage example</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <vue-lpage :data="data" :page="page" :results-per-page="resultsPerPage">
+        <div slot-scope="{subset, totalPages, isFirstPage, isLastPage}">
+          <div>
+            Page
+            <input type="number" v-model="page" :min="1" :max="totalPages" />
+            out of {{ totalPages }}
+          </div>
+          <hr />
+          <div>
+            Show
+            <input
+              type="number"
+              v-model="resultsPerPage"
+              :min="1"
+              :max="data.length"
+            />
+            results per page
+          </div>
+          <hr />
+          <button :disabled="isFirstPage" @click="page--">
+            Previous
+          </button>
+          <button :disabled="isLastPage" @click="page++">
+            Next
+          </button>
+          <hr />
+          <ul>
+            <li v-for="quote in subset" :key="quote">{{ quote }}</li>
+          </ul>
+        </div>
+      </vue-lpage>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="../dist/vue-lpage.js"></script>
+    <script>
+      new Vue({
+        el: "#app",
+        data() {
+          return {
+            data: [
+              "Ohh yea, you gotta get schwifty. -Rick",
+              "He's not pressing charges… That's gotta be the \"you shot me\" equivalent of not being mad. -Rick",
+              "Get off the high road Summer. We all got pink eye because you wouldn't stop texting on the toilet. -Rick",
+              "I'm not looking for judgement, just a yes or no. Can you assimilate a giraffe? -Rick",
+              "Yea… If you spend all day shuffling words around you can make anything sound bad… Morty… -Rick",
+              "Like nothing shady ever happened in a fully furnished office? You ever hear about Wall Street, Morty? You know what those guys do in their fancy board rooms? They take their balls and dip 'em in cocaine and wipe 'em all over each other. You know Grandpa goes around and he does his business in public because grandpa isn't shady. -Rick",
+              "Yo! What up my glipglops! -Rick",
+              "Then it's time to get your beak wet tonight playa! -Rick"
+            ],
+            page: 1,
+            resultsPerPage: 3
+          };
+        },
+        components: {
+          VueLpage: window["vue-lpage"].default
+        }
+      });
+    </script>
+  </body>
+</html>
