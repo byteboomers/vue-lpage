@@ -90,7 +90,7 @@ Pagination is one-based (page 1 is the first page).
 
 ## Powered by
 
-* Babel
+* Babel 7
 * Webpack 4
 
 ## License
