@@ -1,6 +1,6 @@
 # vue-lpage
 
-> Low-level Vue pagination component
+Low-level Vue pagination component
 
 ![screenshot](./screenshot.png)
 
@@ -106,16 +106,3 @@ Pagination is one-based (page 1 is the first page).
 - **totalPages**: the total amount of pages.
 - **isFirstPage**: whether the current page is the first one.
 - **isLastPage**: whether the current page is the last one.
-
-## Powered by
-
-- Babel 7
-- Webpack 4
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
-
-## Twitter
-
-[Follow me on Twitter](https://twitter.com/KrolsBjorn)
