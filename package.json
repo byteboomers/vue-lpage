@@ -1,6 +1,6 @@
 {
   "name": "vue-lpage",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Low-level Vue pagination component",
   "author": "Bjorn Krols (https://byteboomers.com)",
   "license": "MIT",
