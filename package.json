@@ -1,7 +1,8 @@
 {
   "name": "vue-lpage",
-  "version": "1.0.3",
   "description": "Low-level Vue pagination component",
+  "private": false,
+  "version": "1.0.3",
   "author": "Bjorn Krols (https://byteboomers.com)",
   "license": "MIT",
   "keywords": [
@@ -23,6 +24,7 @@
   "scripts": {
     "build": "webpack --mode production --progress"
   },
+  "husky": {},
   "dependencies": {
     "@babel/runtime": "^7.4.4"
   },
@@ -35,5 +37,6 @@
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2"
-  }
+  },
+  "peerDependencies": {}
 }
